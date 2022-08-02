@@ -94,3 +94,11 @@ decltype(yourvariableYouWant) variableName = value => if you want to declare var
 std::hex => to print hex number .
 ```
 
+```c++
+to create ptr in dynamic memory : int * dnumber = new int[1] ;
+but you must delete the variable by use delete dnumber or if is array delete[] arrayname
+```
+
+![](E:\study.githube\imgs\c++completecourse.png)
+
+![](E:\study.githube\imgs\dynamic memory png.png)

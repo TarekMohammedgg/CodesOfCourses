@@ -63,4 +63,34 @@ because i want to learn about programming , it is my job and i want to be a grea
 system("pause>0") ; 
 ```
 
- 
+------
+
+## complete course c++: 
+
+### to learn the max integer can understand in int or any data type 
+
+```c++
+in generall => -2^(n-1) and 2^(n-1)-1 
+ int => -2^(32-1) and 2^(32-1)-1 
+  if the data type is unsigned => 2^(32)-1 
+      32-1 عشان فيه واحد بت للاشاره 
+      
+```
+
+```c++
+wchar_t x = 't' ; == char x = 't'  ;
+but the different is the wchar take much memory to save the character 
+```
+
+```c++
+auto result = a + b+ c ; 
+// must on the same line 
+typeid(YourVariable).name() => to know the datatype of your variable .. 
+decltype(yourvariableYouWant) variableName = value => if you want to declare variable be the same type of another variable .. 
+```
+
+```
+0xhexnumber or 0bbinar
+std::hex => to print hex number .
+```
+

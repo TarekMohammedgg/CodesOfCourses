@@ -1,3 +1,5 @@
+
+
 ## why you like to learning c++ ??
 
 because i want to learn about programming , it is my job and i want to be a great in this field . 
@@ -67,13 +69,14 @@ system("pause>0") ;
 
 ## complete course c++: 
 
-### to learn the max integer can understand in int or any data type 
+### to learn the max integer can understand in int or any data type   
 
 ```c++
 in generall => -2^(n-1) and 2^(n-1)-1 
  int => -2^(32-1) and 2^(32-1)-1 
   if the data type is unsigned => 2^(32)-1 
       32-1 عشان فيه واحد بت للاشاره 
+      
       
 ```
 
@@ -102,3 +105,114 @@ but you must delete the variable by use delete dnumber or if is array delete[] a
 ![](E:\study.githube\imgs\c++completecourse.png)
 
 ![](E:\study.githube\imgs\dynamic memory png.png)
+
+## function 
+
+```c++
+// function overloading 
+double sum (double a , double b ) {
+    double res = a+b ; 
+    return res; 
+}
+double sum (double a , double b , double c) {
+    double res = a+b+c; 
+    return res; 
+}
+// polymorephism : the same name but the argument not same and return value also . 
+double sum (double a , double b ) {
+    double res = a+b ; 
+    return res; 
+}
+int  sum (int a , int b ) {
+    int  res = a+b; 
+    return res; 
+}
+// lambda function method 
+// if you want send it all by refrence type [&] or one refrence and b value type [a , &b] 
+auto sum = [your capture ] (int a , int b )->int {
+   int res ; 
+    res = a + b ; 
+    return res ; 
+}
+// function pointer 
+int (*sum) (int , int ) ; 
+
+```
+
+![](E:\study.githube\imgs\TheFunctions.png)
+
+```c++
+#include<iostream>
+#include<math.h>
+using namespace std ;
+// default function
+int sum (int a , int b ) {
+int res ;
+res = a + b ;
+cout<<"the sum is : " << res << endl ;
+return 0 ;}
+// by reference
+int sub (int *a , int* b ){
+int res = *a - *b ;
+cout<<"the sub is:" << res << endl ;
+a = a+ 10 ;
+b = b+ 10 ;
+return 0; }
+// overloading
+int sum (int a , int b , int c  ) {
+int res ;
+res = a + b + c  ;
+cout<<"the sum is : " << res << endl ;
+return 0 ;}
+// polymorphism
+double sum (double a , double b ) {
+double res ;
+res = a + b ;
+cout<<"the sum is : " << res << endl ;
+return 0 ;}
+// lamda
+ auto  multi = [=] ( long  a ,  long  b)-> long {
+ long res = a * b ;
+ cout<<"the multiplication is : " << res<<endl ;
+return 0 ;
+ } ;
+int main(){
+int a , b ;
+a = 10 ;
+b = 11 ;
+int c = 12 ;
+int res1= sum(a , b ) ;
+int res2 = sub(&a, &b ) ;
+cout<<"the new a : " << a << "\tthe new b : " << b << endl ;
+int res3  = sum(a , b ,c ) ;
+double res4 = sum(10.5 , 12.5 ) ;
+long  res5 = multi(a , b ) ;
+return 0 ; }
+
+```
+
+```c++
+// function pointer work with lambda method very well .. 
+// function pointer is use to point to another function ..and it should point to the same signature  
+int sum (int a , int b) {
+    int res ; 
+    res = a+b ; 
+    return res ; 
+}
+int (*sumptr)(int , int ); 
+int main(){
+    sumptr = &sum ; // must be insert main function .. 
+    int rs = sumptr(10 , 9 ) ; 
+    cout<<rs<<endl ;
+    
+    
+    return 0; 
+}
+```
+
+### function pointer 
+
+<img src="E:\study.githube\imgs\FunctionPointer.png" style="zoom: 80%;" />
+
+<img src="E:\study.githube\imgs\functionpointerwithlamda.png" style="zoom: 80%;" />
+

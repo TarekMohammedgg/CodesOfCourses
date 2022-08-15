@@ -11,6 +11,14 @@ because i want to learn about programming , it is my job and i want to be a grea
 1. introduction to c++ . 
 2. what is source code , object code , compiler , algorithm ? 
 3. introduction to  variables .
+3. (complete course in c++) -> how to  learn the max integer can understand in int or any data type
+3. (complete course in c++) ->functions (default &overloading & call by reference & polymorphism& lamda & pointer ). 
+3. (complete course in c++) ->oop -> (class - constructors- deconstructors - operation overloading  ) .
+3. (complete course in c++) ->oop -> (templates  & namespace & linked list   ) . 
+
+----------------------------
+
+3.  
 
 ----------------------------
 
@@ -118,7 +126,7 @@ double sum (double a , double b , double c) {
     double res = a+b+c; 
     return res; 
 }
-// polymorephism : the same name but the argument not same and return value also . 
+// polymorphism : the same name but the argument not same and return value also . 
 double sum (double a , double b ) {
     double res = a+b ; 
     return res; 
@@ -215,4 +223,102 @@ int main(){
 <img src="E:\study.githube\imgs\FunctionPointer.png" style="zoom: 80%;" />
 
 <img src="E:\study.githube\imgs\functionpointerwithlamda.png" style="zoom: 80%;" />
+
+## oop 
+
+### fundamental about class  
+
+![](E:\study.githube\imgs\fundementalaboutoop.png)
+
+## constructors & deconstructors 
+
+```c++
+//header
+class rectangle {
+    public  :
+    int width , height ; 
+    rectangle (int w , int h ); 
+    int area(); 
+    ~rectangle(); 
+};
+//implementation 
+int rectangle :: area(){
+    int res = this -> width * this->height ; 
+    return res; 
+}
+rectangle :: rectangle (int w , int h ){
+    this->width = w; 
+    this->height = h ; 
+    
+}
+rectangle ::~rectangle (){
+    cout<<"Thank you" <<endl ;
+}
+```
+
+### operator overloading 
+
+```c++
+#ifndef RECTANGLE_H
+#define RECTANGLE_H
+
+class rectangle {
+    public  :
+    rectangle (int w , int h );
+    int area();
+    ~rectangle();
+    rectangle operator + (rectangle &rect ) ;
+    private:
+            int width , height ;
+
+};
+
+#endif // RECTANGLE_H
+
+```
+
+```c++
+#include "rectangle.h"
+#include<iostream>
+using namespace std;
+//implementation
+int rectangle :: area(){
+    int res = this -> width * this->height ;
+    return res;
+}
+rectangle :: rectangle (int w , int h ){
+    this->width = w;
+    this->height = h ;
+
+}
+rectangle ::~rectangle (){
+    cout<<"Thank you" <<endl ;
+}
+rectangle rectangle:: operator + (rectangle &rect ) {
+int width = this->width + rect.width ;
+int height = this->height + rect.height;
+cout<<"the width is : " << width << endl ;
+cout<<"the height is : " << height << endl;
+return rectangle (width , height ) ;  }
+
+
+```
+
+### templates 
+
+```c++
+
+```
+
+### instance 
+
+```c++ 
+if class is protected you can inheriet any information from father to brother , but you can not call it from main function (instance ) . 
+```
+
+### virtual 
+
+```
+virtual : if you want to make overriding on any function and you must put implementation =0 in father class 
+```
 

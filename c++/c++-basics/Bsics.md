@@ -147,7 +147,7 @@ int (*sum) (int , int ) ;
 
 ```
 
-![](E:\study.githube\imgs\TheFunctions.png)
+![](G:\Shared drives\MyDrive\Files\study.githube\imgs\TheFunctions.png)
 
 ```c++
 #include<iostream>

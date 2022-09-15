@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1663241135 source:g:\shared drives\mydrive\files\study.githube\c++\problemsolving\codeforces_c++\main.cpp
+	<iostream>
+	<string.h>
+	<string>
+	<cmath>
+	<math.h>
+	<bits/stdc++.h>
+	<algorithm>
+	<ctype.h>
+	<set>
+	<vector>
+	<queue>
+	<stack>
+

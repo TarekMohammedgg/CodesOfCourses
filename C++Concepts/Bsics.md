@@ -18,9 +18,6 @@ because i want to learn about programming , it is my job and i want to be a grea
 
 ----------------------------
 
-3.  
-
-----------------------------
 
 ### 1.introduction to c++ . 
 
